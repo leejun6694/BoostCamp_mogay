@@ -246,26 +246,24 @@ func textField(textField: UITextField,
 
 ## 6장
 
+> 114 페이지
+
 ### 수정 전
 ```swift
 override func loadView() {
-        ...
-
-        segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
-
-        ...
-    }
+    ...
+    segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+    ...
+}
 
 ```
 ### 수정 후
 ```swift
 override func loadView() {
-        ...
-
-        segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-
-        ...
-    }
+    ...
+    segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+    ...
+}
 ```
 
 ### 근거
@@ -273,17 +271,18 @@ override func loadView() {
 * UIColor 의 instance method 변경
     * whiteColor() -> white
     * colorWithAlphaComponent() -> withAlphaComponent()
-> 114 페이지
+
+> 115 페이지
 
 ### 수정 전
 ```swift
 override func loadView() {
-        ...
-        let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(view.topAnchor)
-        let leadingConstraint = segmentedControl.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor)
-        let trailingConstraint = segmentedControl.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
-        ...
-    }
+    ...
+    let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(view.topAnchor)
+    let leadingConstraint = segmentedControl.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor)
+    let trailingConstraint = segmentedControl.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
+    ...
+}
 
 ```
 
@@ -302,15 +301,14 @@ override func loadView() {
 * Naming
 * UISegmentedControl 의 instance method 변경
     * constraintEqualToAnchor() -> constraint(equalTo anchor: )
-> 115 페이지
 
+> 116 페이지
 
 ### 수정 전
 ```swift
 topConstraint.active = true
 leadingConstraint.active = true
 trailingConstraint.active = true
-
 ```
 
 ### 수정 후
@@ -321,8 +319,28 @@ trailingConstraint.isActive = true
 ```
 
 ### 근거
+* 프로퍼티 이름 변경
+
+> 118 페이지
+
+### 수정 전
+```swift
+let topConstraint = segmentedControl.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 8)
+```
+
+### 수정 후
+```swift
+let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
+```
+
+### 근거
 * Naming
-> 116 페이지
+* UISegmentedControl 의 instance method 변경
+    * constraintEqualToAnchor(_:constant:) -> constraint(equalTo anchor: NSLayoutAnchor<AnchorType>,
+       constant c: CGFloat)
+
+
+> 120 페이지
 
 ### 수정 전
 ```swift
@@ -333,7 +351,6 @@ convenience init(item view1: AnyObject,
   attribute attr2: NSLayoutAttribute,
   multiplier: CGFloat,
   constant c: CGFloat)
-
 ```
 
 ### 수정 후
@@ -350,4 +367,25 @@ convenience init(item view1: Any,
 ### 근거
 * The Swift Programming Language
     * AnyObject -> Any
-> 120 페이지
+
+> 122 페이지
+
+### 수정 전
+```swift
+segmentedControl.addTarget(self, action: "mapTypeChanged:", forControlEvents: .ValueChanged)
+```
+
+### 수정 후
+```swift
+segmentedControl.addTarget(self, action: #selector(mapTypeChanged(segControl:)), for: .valueChanged)
+```
+
+### 근거
+* The Swift Programming Language
+  * Expression
+    * Selector Expression
+* Enum의 case 명명법 변경
+    * UpperCamelCase -> lowerCamelCase
+    * The Swift Programming Language(Language Guide)
+      * Enumerations
+      * Enumeration Syntax
