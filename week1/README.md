@@ -18,6 +18,50 @@ var greeting = " Hello, playground"
 * Naming
 * Promote Clear Usage
 
+> 35 페이지
+
+### 수정 전
+```swift
+var dictionaryOfCapitalsByCountry = Dictionary<String, String>
+```
+
+### 수정 후
+```swift
+var capitalsByCountry = Dictionary<String, String>
+```
+
+### 근거
+* Swift API Design Guidelines
+* Naming
+* Promote Clear Usage - Name variables, parameters, and associated types according to their roles, rather than their type constraints.
+
+> 44 페이지
+
+### 수정 전
+```swift
+enum PieType {
+    case Apple
+    case Cherry
+    case Pecan
+}
+```
+
+### 수정 후
+```swift
+enum PieType {
+    case apple
+    case cherry
+    case pecan
+}
+```
+
+### 근거
+* Enum의 case 명명법 변경
+	* UpperCamelCase -> lowerCamelCase
+	* The Swift Programming Language(Language Guide)
+		* [Enumerations](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html)
+			* Enumeration Syntax
+
 ## 3장
 
 > 52 페이지
