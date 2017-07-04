@@ -20,7 +20,45 @@ var greeting = " Hello, playground"
 
 ## 3장
 
+> 52 페이지
+
+### 수정 전
+
+```swi
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
+    let firstView = UIView(frame: firstFrame)
+    firstView.backgroundColor = UIColor.blueColor()
+    view.addSubview(firstView)
+  }
+}
+```
+
+### 수정 후
+
+```swi
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
+    let firstView = UIView(frame: firstFrame)
+    firstView.backgroundColor = UIColor.blue()
+    view.addSubview(firstView)
+  }
+}
+```
+
+### 근거
+
+* UIKit의 UIColor 객체 이름 변경
+  * UIColor.blueColor() -> [UIColor.blue()](https://developer.apple.com/documentation/uikit/uicolor)
+
 ## 4장
+
 > 83 페이지
 
 ### 수정 전
