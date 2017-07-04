@@ -57,10 +57,10 @@ enum PieType {
 
 ### 근거
 * Enum의 case 명명법 변경
-	* UpperCamelCase -> lowerCamelCase
-	* The Swift Programming Language(Language Guide)
-		* [Enumerations](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html)
-			* Enumeration Syntax
+ * UpperCamelCase -> lowerCamelCase
+ * The Swift Programming Language(Language Guide)
+  * [Enumerations](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html)
+   * Enumeration Syntax
 
 ## 3장
 
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
 
     let firstFrame = CGRect(x: 160, y: 240, width: 100, height: 150)
     let firstView = UIView(frame: firstFrame)
-    firstView.backgroundColor = UIColor.blue()
+    firstView.backgroundColor = UIColor.blue
     view.addSubview(firstView)
   }
 }
@@ -98,8 +98,9 @@ class ViewController: UIViewController {
 
 ### 근거
 
-* UIKit의 UIColor 객체 이름 변경
-  * UIColor.blueColor() -> [UIColor.blue()](https://developer.apple.com/documentation/uikit/uicolor)
+* view의 backgroundColor를 설정하는 방법 변경
+  * UIKit의 UIColor의 클래스 메서드가 사라지고 객체로 변경
+  * UIColor.blueColor() -> [UIColor.blue](https://developer.apple.com/documentation/uikit/uicolor/1621947-blue)
 
 ## 4장
 
