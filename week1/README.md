@@ -24,7 +24,7 @@ var greeting = " Hello, playground"
 
 ### 수정 전
 
-```swi
+```Swift
 class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
 ### 수정 후
 
-```swi
+```Swift
 class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
