@@ -52,7 +52,8 @@ if let r1 = reading1, let r2 = reading, let r3 = reading3 {
 ```
 
 ### 근거
-
+* SE-0099
+  * [Restructuring Condition Clauses](https://github.com/apple/swift-evolution/blob/master/proposals/0099-conditionclauses.md)
 
 > 44 페이지
 
