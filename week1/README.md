@@ -119,7 +119,7 @@ class ViewController: UIViewController {
 ### 근거
 
 * view의 backgroundColor를 설정하는 방법 변경
-  * UIKit의 UIColor의 클래스 메서드가 사라지고 객체로 변경
+  * UIKit의 UIColor의 클래스 메서드가 사라지고 프로퍼티로 변경
   * UIColor.blueColor() -> [UIColor.blue](https://developer.apple.com/documentation/uikit/uicolor/1621947-blue)
 
 ## 4장
