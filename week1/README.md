@@ -35,6 +35,25 @@ var capitalsByCountry = Dictionary<String, String>
 * Naming
 * Promote Clear Usage - Name variables, parameters, and associated types according to their roles, rather than their type constraints.
 
+> 41 페이지
+
+### 수정 전
+```swift
+if let r1 = reading1, r2 = reading, r3 = reading3 {
+  ...
+}
+```
+
+### 수정 후
+```swift
+if let r1 = reading1, let r2 = reading, let r3 = reading3 {
+  ...
+}
+```
+
+### 근거
+
+
 > 44 페이지
 
 ### 수정 전
@@ -384,6 +403,37 @@ segmentedControl.addTarget(self, action: #selector(mapTypeChanged(segControl:)),
 * The Swift Programming Language
   * Expression
     * Selector Expression
+* Enum의 case 명명법 변경
+    * UpperCamelCase -> lowerCamelCase
+    * The Swift Programming Language(Language Guide)
+      * Enumerations
+      * Enumeration Syntax
+
+### 수정 전
+```swift
+func mapTypeChanged(segControl: UISegmentedControl) {
+    switch segControl.selectedSegmentIndex {
+    case 0: mapView.mapType = .Standard
+    case 1: mapView.mapType = .Hybrid
+    case 2: mapView.mapType = .Satelite
+    default: break
+  }
+}
+```
+
+### 수정 후
+```swift
+func mapTypeChanged(segControl: UISegmentedControl) {
+    switch segControl.selectedSegmentIndex {
+    case 0: mapView.mapType = .standard
+    case 1: mapView.mapType = .hybrid
+    case 2: mapView.mapType = .satellite
+    default: break
+    }
+}
+```
+
+### 근거
 * Enum의 case 명명법 변경
     * UpperCamelCase -> lowerCamelCase
     * The Swift Programming Language(Language Guide)
