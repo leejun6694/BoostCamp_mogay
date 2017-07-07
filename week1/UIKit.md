@@ -35,26 +35,50 @@
 ## User Interface
 #### Views and Controls
 - First Steps
-  - UIView : An object that represents a rectangular area on the screen and manages the content in that area.
+  - UIView : An object that represents a rectangular area on the screen and manages the content in that area. (iOS 2.0+)
 - Container Views (Collection Views)
+  - View
+    - UICollectionView : An object that manages an ordered collection of data items and presents them using customizable layouts. (iOS 6.0+)
+    - UICollectionViewController : Represents a view controller whose content consists of a collection view. (iOS 6.0+)
+  - Cells
+    - UICollectionReusableView : A view that defines the behavior for all cells and supplementary views presented by a collection view. (iOS 6.0+)
+    - UICollectionViewCell : A single data item when that item is within the collection view’s visible bounds. (iOS 6.0+)
+  - Layouts
+    - UICollectionViewLayout : An abstract base class for generating layout information for a collection view. (iOS 6.0+)
+    - UICollectionViewFlowLayout : A concrete layout object that organizes items into a grid with optional header and footer views for each section. (iOS 6.0+)
+    - UICollectionViewTransitionLayout : A special type of layout object that lets you implement behaviors when changing from one layout to another in your collection view. (iOS 7.0+)
+    - UICollectionViewLayoutAttributes : A layout object that manages the layout-related attributes for a given item in a collection view. (iOS 6.0+)
+  - Updates
+    - UICollectionViewUpdateItem : An object that describes a single change to make to an item in a collection view. (iOS 6.0+)
+    - UICollectionViewFocusUpdateContext : A context object that stores information specific to a focus update in a collection view. (iOS 9.0+)
+    - UICollectionViewLayoutInvalidationContext : A context object that declares which parts of your layout need to be updated when the layout is invalidated. (iOS 7.0+)
+    - UICollectionViewFlowLayoutInvalidationContext : A set of properties for determining whether to recompute the size of items or their position in the layout. (iOS 7.0+)
+  - Drag and Drop
+    - protocol UICollectionViewDragDelegate : The interface for initiating drags from a collection view. (Beta)
+    - protocol UICollectionViewDropDelegate : The interface for handling drops in a collection view. (Beta)
+    - protocol UICollectionViewDropCoordinator : An interface for coordinating your custom drop-related actions with the collection view. (Beta)
+    - UICollectionViewDropProposal : Your proposed solution for handling a drop in a collection view. (Beta)
+    - protocol UICollectionViewDropItem : The data associated with an item being dropped into the collection view. (Beta)
+    - protocol UICollectionViewDropPlaceholderContext : An object that contains information about a placeholder in the collection view. (Beta)
+    - protocol UIDataSourceTranslating : An advanced interface for managing a data source object. (Beta)
 
 - Container Views (TableViews)
   - View
     - UITableView : A view that presents data using rows arranged in a single column. (iOS 2.0+)
     - UITableViewController : A controller object that manages a table view. (iOS 2.0+)
     - UITableViewFocusUpdateContext : A context object that provides information relevant to a specific focus update from one view to another. (iOS 9.0+)
-    - UILocalizedIndexedCollation : An object that provides ways to organize, sort, and localize the data for a table view that has a section index.
+    - UILocalizedIndexedCollation : An object that provides ways to organize, sort, and localize the data for a table view that has a section index. (iOS 3.0+)
   - Rows
-    - UITableViewCell : A cell in a table view.
+    - UITableViewCell : A cell in a table view. (iOS 2.0+)
     - UISwipeActionsConfiguration : The set of actions to perform when swiping on rows of a table. (Beta)
     - UIContextualAction : An action to display when the user swipes a table row. (Beta)
-    - UITableViewRowAction : A single action to present when the user swipes horizontally in a table row.
+    - UITableViewRowAction : A single action to present when the user swipes horizontally in a table row. (iOS 8.0+)
     - enum UIContextualAction.Style : Constants indicating the style information that is applied to the action button. (Beta)
 
   - Headers and Footers
-    - UITableViewHeaderFooterView : A reusable view that can be placed at the top or bottom of a table section to display additional information for that section.
-      -Adornments
-    - UIRefreshControl :A standard control that can initiate the refreshing of a table view’s contents.
+    - UITableViewHeaderFooterView : A reusable view that can be placed at the top or bottom of a table section to display additional information for that section. (iOS 6.0+)
+  - Adornments
+    - UIRefreshControl :A standard control that can initiate the refreshing of a table view’s contents. (iOS 6.0+)
   - Drag and Drop
     - protocol UITableViewDragDelegate : The interface for initiating drags from a table view. (Beta)
     - protocol UITableViewDropDelegate : The interface for handling drops in a table view. (Beta)
@@ -84,7 +108,7 @@
 - Text Views
   - UILabel : A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose. (iOS 2.0+)
   - UITextField : An object that displays an editable text area in your interface. (iOS 2.0+)
-  - UITextView : A scrollable, multiline text region.
+  - UITextView : A scrollable, multiline text region. (iOS 2.0+)
 - Bars
   - class UIBarItem : An abstract superclass for items that can be added to a bar that appears at the bottom of the screen. (iOS 2.0+)
   - UIBarButtonItem : A button specialized for placement on a toolbar or tab bar. (iOS 2.0+)
@@ -96,9 +120,9 @@
   - UITabBarItem : An item in a tab bar. (iOS 2.0+)
   - protocol UIBarPositioning : A set of methods for defining the ways that bars can be positioned in iOS apps. (iOS 7.0+)
   - protocol UIBarPositioningDelegate : A set of methods that support the positioning of a bar that conforms to the UIBarPositioning protocol (iOS 7.0+)
-    -Menus
-  - UIMenuController : The menu interface for the Cut, Copy, Paste, Select, Select All, and Delete commands.
-  - UIMenuItem : A custom item in the editing menu managed by the UIMenuController object.
+- Menus
+  - UIMenuController : The menu interface for the Cut, Copy, Paste, Select, Select All, and Delete commands. (iOS 3.0+)
+  - UIMenuItem : A custom item in the editing menu managed by the UIMenuController object. (iOS 3.2+)
 - Visual Adornments
   - UIVisualEffect : An initializer for visual effect views and blur and vibrancy effect objects. (iOS 8.0+)
   - UIVisualEffectView : An object that implements some complex visual effects. (iOS 8.0+)
@@ -111,6 +135,139 @@
   - struct UIEdgeInsets : The inset distances for views. (iOS 2.0+)
   - struct NSDirectionalEdgeInsets : Edge insets that take language direction into account. (Beta)
   - struct UIOffset : Defines a structure that specifies an amount to offset a position. (iOS 5.0+)
+#### View Management
+  - First Steps
+    - UIViewController : Provides the infrastructure for managing the views of your UIKit app. (iOS 2.0+)
+    - UIPresentationController : An object that provides advanced view and transition management for presented view controllers. (iOS 8.0+)
+    - protocol UIContentContainer : A collection of methods that help you adapt the contents of your view controllers to size and trait changes. (iOS 8.0+)
+  - Split View Interface
+    - UISplitViewController : A container view controller that presents a master-detail interface. (iOS 3.2+)
+  - Navigation Interface
+    - UINavigationController : A specialized view controller that manages the navigation of hierarchical content. (iOS 2.0+)
+    - UINavigationItem : An object that manages the buttons and views to be displayed in a navigation bar object. (iOS 2.0+)
+    - UINavigationBar : A control that supports navigation of hierarchical content, most often used in navigation controllers. (iOS 2.0+)
+  - Page View Interface
+    - UIPageViewController : A view controller that lets the user navigate between pages of content, where each page is managed by its own view controller object. (iOS 5.0+)
+  - Tab View Interface
+    - UITabBarController : A specialized view controller that manages a radio-style selection interface. (iOS 2.0+)
+    - UITabBar : A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app. (iOS 2.0+)
+    - UITabBarItem : An item in a tab bar. (iOS 2.0+)
+  - Search Interface
+    - UISearchContainerViewController : A wrapper for search results that you want to embed in a container view controller. (iOS 9.1+)
+    - UISearchBar : A text field–like control that supports text-based searches. (iOS 2.0+)
+    - protocol UISearchBarDelegate : A collection of optional methods that you implement to make a search bar control functional. (iOS 2.0+)
+    - UISearchController : An object that manages the display of search results based on interactions with a search bar. (iOS 8.0+)
+    - protocol UISearchResultsUpdating : A set of methods that let you update search results based on information the user enters into the search bar.(iOS 8.0+)
+  - View Layout
+    - NSLayoutConstraint : The relationship between two user interface objects that must be satisfied by the constraint-based layout system. (iOS 6.0+)
+    - protocol UILayoutSupport : A set of methods that provide layout support and access to layout anchors. (iOS 7.0+)
+    - UILayoutGuide : A rectangular area that can interact with Auto Layout. (iOS 9.0+)
+    - NSLayoutAnchor : A factory class for creating layout constraint objects using a fluent API. (iOS 9.0+)
+    - NSLayoutDimension : A factory class for creating size-based layout constraint objects using a fluent API. (iOS 9.0+)
+    - NSLayoutXAxisAnchor : A factory class for creating horizontal layout constraint objects using a fluent API. (iOS 9.0+)
+    - NSLayoutYAxisAnchor : A factory class for creating vertical layout constraint objects using a fluent API. (iOS 9.0+)
+  - Focus Interactions
+    - UIFocusGuide : An object that exposes nonview areas as focusable. (iOS 9.0+)
+    - protocol UIFocusItem : A protocol—not intended for conformance by third-party classes—that lets an item declare its ability to participate in the focus system. (iOS 10.0+)
+    - UIFocusSystem : The current state of the user interface's focus system. (Beta)
+    - protocol UIFocusEnvironment : A set of methods that define the focus behavior for a branch of the view hierarchy. (iOS 9.0+)
+    - UIFocusUpdateContext : An object that provides information relevant to a specific focus update from one view to another. (iOS 9.0+)
+    - UIFocusAnimationCoordinator : A coordinator of focus-related animations during a focus update. (iOS 9.0+)
+    - UIFocusDebugger : A runtime object for debugging focus-related interactions. (Beta)
+  - Interface Restoration
+    - protocol UIViewControllerRestoration : A set of methods used by classes that act as "restoration classes” for view controllers during the state restoration process. (iOS 6.0+)
+    - protocol UIObjectRestoration : A set of methods used by classes that act as "restoration classes” for objects during the state restoration process. (iOS 7.0+)
+    - protocol UIStateRestoring : A set of methods that let you include any object in your state restoration archives. (iOS 7.0+)
+  - Interface Orientation
+    - func UIInterfaceOrientationIsPortrait(UIInterfaceOrientation) : Returns a Boolean value indicating whether the user interface is currently presented in a portrait orientation. (iOS 8.3+)
+    - func UIInterfaceOrientationIsLandscape(UIInterfaceOrientation) : Returns a Boolean value indicating whether the user interface is currently presented in a landscape orientation. (iOS 8.3+)
+#### System View Controllers
+  - Image Picker
+    - UIImagePickerController : An object that manages customizable, system-supplied user interfaces for taking pictures and movies on supported devices, and for choosing saved images and movies for use in your app. (iOS 2.0+)
+    - protocol UIImagePickerControllerDelegate : A set of methods that your delegate object must implement to interact with the image picker interface. (iOS 2.0+)
+  - Video Editor
+    - UIVideoEditorController : A video editor that manages the system-supplied user interface for trimming video frames from the start and end of a previously recorded movie as well as reencoding to lower quality. (iOS 3.1+)
+    - protocol UIVideoEditorControllerDelegate : A set of methods that your delegate object must implement to respond to the video editor. (iOS 3.1+)
+  - Document Browser
+    - UIDocumentBrowserViewController : A view controller for browsing and performing actions on documents stored locally and in the cloud. (Beta)
+    - UIDocumentBrowserAction : A custom action that you can create and add to a document browser's menu or navigation bar. (Beta)
+    - UIDocumentBrowserTransitionController : An object that implements the standard loading and transition animations for a document browser. (Beta)
+    - UIDocumentPickerViewController : An object that lets the user select documents or destinations outside your app’s sandbox. (iOS 8.0+)
+    - enum UIDocumentBrowserErrorCode : The error codes for errors raised by the document browser. (Beta)
+    - let UIDocumentBrowserErrorDomain: String : The error domain for errors raised by the document browser. (Beta)
+  - Document Previewing
+    - UIDocumentInteractionController : A view controller that previews, opens, or prints files whose file format cannot be handled directly by your app. (iOS 3.2+)
+  - iCloud Sharing
+    - UICloudSharingController : A view controller that presents standard screens for adding and removing people from a CloudKit share record. (iOS 10.0+)
+  - Shared Activities
+    - UIActivityViewController : A view controller that you can use to offer various services from your app. (iOS 6.0+)
+    - UIActivity : An abstract class that you subclass to implement app-specific services. (iOS 6.0+)
+    - protocol UIActivityItemSource : A set of methods used by an activity view controller to retrieve the data items to act on. (iOS 6.0+)
+    - UIActivityItemProvider : A proxy for data passed to an activity view controller.(iOS 6.0+)
+  - Printer Picker
+    - UIPrinterPickerController : The system interface for selecting a printer. (iOS 8.0+)
+    - protocol UIPrinterPickerControllerDelegate : A set of methods for managing the presentation and dismissal of a printer picker interface. (iOS 8.0+)
+  - Word Lookup
+    - UIReferenceLibraryViewController : A dictionary service to look up the definition of a word or term from within an app. (iOS 5.0+)
+#### Animation and Haptics
+- Content Animations (Property-Based Animations)
+  - First Steps
+    - UIViewPropertyAnimator : A class that animates changes to views and allows the dynamic modification of those animations. (iOS 10.0+)
+    - protocol UIViewAnimating : An interface for implementing custom animator objects. (iOS 10.0+)
+  - Timing Curves
+    - protocol UITimingCurveProvider : An interface for providing the timing information needed to perform animations. (iOS 10.0+)
+    - UISpringTimingParameters : The timing information for animations that mimics the behavior of a spring. (iOS 10.0+)
+    - UICubicTimingParameters : The timing information for animations in the form of a cubic Bézier curve. (iOS 10.0+)
+  - In-Progress Animations
+    - protocol UIViewImplicitlyAnimating : An interface for modifying an animation while it is running. (iOS 10.0+)
+- Content Animations (View Controller Transitions)
+  - Animation Delegate
+    - protocol UIViewControllerTransitioningDelegate : A set of methods that vend objects used to manage a fixed-length or interactive transition between view controllers. (iOS 7.0+)
+  - Non-Interactive Transitions
+    - protocol UIViewControllerAnimatedTransitioning : A set of methods for implementing the animations for a custom view controller transition. (iOS 7.0+)
+    - protocol UIViewControllerContextTransitioning : A set of methods that provide contextual information for transition animations between view controllers. (iOS 7.0+)
+  - Interactive Transitions
+    - UIPercentDrivenInteractiveTransition : An object that drives an interactive animation between one view controller and another. (iOS 7.0+)
+    - protocol UIViewControllerInteractiveTransitioning : A set of methods that enable an object (such as a navigation controller) to drive a view controller transition. (iOS 7.0+)
+    - protocol UIViewImplicitlyAnimating : An interface for modifying an animation while it is running. (iOS 10.0+)
+  - Transition Coordinators
+    - protocol UIViewControllerTransitionCoordinator : A set of methods that provides support for animations associated with a view controller transition. (iOS 7.0+)
+    - protocol UIViewControllerTransitionCoordinatorContext : A set of methods that provides information about an in-progress view controller transition. (iOS 7.0+)
+- Physics-Based Animations (UIKit Dynamics)
+  - Dynamic Animators
+    - UIDynamicAnimator : An object that provides physics-related capabilities and animations for its dynamic items, and provides the context for those animations. (iOS 7.0+)
+  - Dynamic Items
+    - protocol UIDynamicItem : A set of methods that can make a custom object eligible to participate in UIKit Dynamics. (iOS 9.0+)
+    - UIDynamicItemBehavior : A base dynamic animation configuration for one or more dynamic items. (iOS 7.0+)
+    - UIDynamicItemGroup : A dynamic item that comprises multiple other dynamic items. (iOS 9.0+)
+  - Behaviors
+    - UIDynamicBehavior : An object that confers a behavioral configuration on one or more dynamic items, for their participation in 2D animation. (iOS 7.0+)
+    - UIAttachmentBehavior : A relationship between two dynamic items, or between a dynamic item and an anchor point. (iOS 7.0+)
+    - UICollisionBehavior : An object that confers to a specified array of dynamic items the ability to engage in collisions with each other and with the behavior’s specified boundaries. (iOS 7.0+)
+    - UIFieldBehavior : An object that applies field-based physics to dynamic items. (iOS 9.0+)
+    - UIGravityBehavior : An object that applies a gravity-like force to all of its associated dynamic items. (iOS 7.0+)
+    - UIPushBehavior : A behavior that applies a continuous or instantaneous force to one or more dynamic items, causing those items to change position accordingly. (iOS 7.0+)
+    - UISnapBehavior : A spring-like behavior whose initial motion is damped over time so that the object settles at a specific point. (iOS 7.0+)
+- Parallax Effects (Motion Effects)
+  - Haptic Feedback
+    - UIFeedbackGenerator : The abstract superclass for all feedback generators. (iOS 10.0+)
+    - UIImpactFeedbackGenerator : A concrete UIFeedbackGenerator subclass that creates haptics to simulate physical impacts. (iOS 10.0+)
+    - UINotificationFeedbackGenerator : A concrete UIFeedbackGenerator subclass that creates haptics to communicate successes, failures, and warnings. (iOS 10.0+)
+    - UISelectionFeedbackGenerator : A concrete UIFeedbackGenerator subclass that creates haptics to indicate a change in selection. (iOS 10.0+)
+#### Windows and Screens
+  - Windows
+    - UIWindow : An object that provides the backdrop for your app’s user interface and provides important event-handling behaviors. (iOS 2.0+)
+    - protocol UICoordinateSpace : A set of methods for converting between different frames of reference on a screen. (iOS 8.0+)
+  - Popovers
+    - UIPopoverPresentationController : An object that manages the display of content in a popover. (iOS 8.0+)
+    - UIPopoverBackgroundView : The background appearance for a popover. (iOS 5.0+)
+    - protocol UIPopoverBackgroundViewMethods : A set of methods that UIPopoverBackgroundView subclasses must implement. (iOS 8.0+)
+  - Alerts
+    - UIAlertController : An object that displays an alert message to the user. (iOS 8.0+)
+    - UIAlertAction : An action that can be taken when the user taps a button in an alert. (iOS 8.0+)
+  - Screens
+    - UIScreen : An object that defines the properties associated with a hardware-based display. (iOS 2.0+)
+    - UIScreenMode : A possible set of attributes that can be applied to a screen object. (iOS 3.2+)
 
 ## Event Handling
 #### Touches, Presses, and Gestures
