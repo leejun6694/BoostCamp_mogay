@@ -15,22 +15,22 @@
   - UIPasteConfiguration : A paste configuration for use by responder objects to declare their ability to accept specific data types for pasting and for drag-and-drop activities. (iOS 11.0+ beta)
 #### Resource Management
 - Storyboards
-	- UIStoryboard : An encapsulation of the design-time view controller graph represented in an Interface Builder storyboard resource file. (iOS 5.0+)
-	- UIStoryboardSegue : An object that prepares for and performs the visual transition between two view controllers. (iOS 5.0+)
-	- UIStoryboardUnwindSegueSource : An encapsulation of information about an unwind segue. (iOS 9.0+)
+ - UIStoryboard : An encapsulation of the design-time view controller graph represented in an Interface Builder storyboard resource file. (iOS 5.0+)
+ - UIStoryboardSegue : An object that prepares for and performs the visual transition between two view controllers. (iOS 5.0+)
+ - UIStoryboardUnwindSegueSource : An encapsulation of information about an unwind segue. (iOS 9.0+)
 - Assets
-	- UIImageAsset : A container for a collection of images that represent multiple ways of describing a single piece of artwork. (iOS 8.0+)
-	- NSDataAsset : An object from a data set type stored in an asset catalog. (iOS 9.0+)
+ - UIImageAsset : A container for a collection of images that represent multiple ways of describing a single piece of artwork. (iOS 8.0+)
+ - NSDataAsset : An object from a data set type stored in an asset catalog. (iOS 9.0+)
 - Nib Files
-	- UINib : An object that wraps, or contains, Interface Builder nib files. (iOS 4.0+)
+ - UINib : An object that wraps, or contains, Interface Builder nib files. (iOS 4.0+)
 #### App Extensions
 - Document Provider
-	- UIDocumentPickerExtensionViewController : The principal class for the Document Picker View Controller extension. (iOS 8.0+)
-	- NSFileProviderExtension : The principal class for the File Provider extension. (iOS 8.0+)
+ - UIDocumentPickerExtensionViewController : The principal class for the Document Picker View Controller extension. (iOS 8.0+)
+ - NSFileProviderExtension : The principal class for the File Provider extension. (iOS 8.0+)
 - Custom Keyboard
-	- UIInputViewController : The primary view controller for a custom keyboard app extension. (iOS 8.0+)
-	- UILexicon : A read-only array of term pairs, each in a lexicon entry object, for use by a custom keyboard. (iOS 8.0+)
-	- UILexiconEntry : A read-only term pair, available within a lexicon object, for use by a custom keyboard. (iOS 8.0+)
+ - UIInputViewController : The primary view controller for a custom keyboard app extension. (iOS 8.0+)
+ - UILexicon : A read-only array of term pairs, each in a lexicon entry object, for use by a custom keyboard. (iOS 8.0+)
+ - UILexiconEntry : A read-only term pair, available within a lexicon object, for use by a custom keyboard. (iOS 8.0+)
 
 ## User Interface
 #### Views and Controls
@@ -53,7 +53,7 @@
 
   - Headers and Footers
     - UITableViewHeaderFooterView : A reusable view that can be placed at the top or bottom of a table section to display additional information for that section.
-  -Adornments
+      -Adornments
     - UIRefreshControl :A standard control that can initiate the refreshing of a table view’s contents.
   - Drag and Drop
     - protocol UITableViewDragDelegate : The interface for initiating drags from a table view. (Beta)
@@ -96,7 +96,7 @@
   - UITabBarItem : An item in a tab bar. (iOS 2.0+)
   - protocol UIBarPositioning : A set of methods for defining the ways that bars can be positioned in iOS apps. (iOS 7.0+)
   - protocol UIBarPositioningDelegate : A set of methods that support the positioning of a bar that conforms to the UIBarPositioning protocol (iOS 7.0+)
--Menus
+    -Menus
   - UIMenuController : The menu interface for the Cut, Copy, Paste, Select, Select All, and Delete commands.
   - UIMenuItem : A custom item in the editing menu managed by the UIMenuController object.
 - Visual Adornments
@@ -115,116 +115,117 @@
 ## Event Handling
 #### Touches, Presses, and Gestures
 - First Step
-  - UIResponder : An abstract interface for responding to and handling events.
-  - UIEvent : An object that describes a single user interaction with your app.
+  - UIResponder : An abstract interface for responding to and handling events. (iOS 2.0+)
+  - UIEvent : An object that describes a single user interaction with your app. (iOS 2.0+)
 - Touches
-  - UITouch : An object representing the location, size, movement, and force of a touch occurring on the screen.
+  - UITouch : An object representing the location, size, movement, and force of a touch occurring on the screen. (iOS 2.0+)
 - ButtonPress
-  - UIPress : An object that represents the presence or movement of a button press on the screen for a particular event.
-  - UIPressesEvent : An event that describes the state of a set of physical buttons that are available to the device, such as those on an associated remote or game controller.
+  - UIPress : An object that represents the presence or movement of a button press on the screen for a particular event. (iOS 9.0+)
+  - UIPressesEvent : An event that describes the state of a set of physical buttons that are available to the device, such as those on an associated remote or game controller. (iOS 9.0+)
 - UIKit Gestures
-  - UILongPressGestureRecognizer
-  - UIPanGestureRecognizer
-  - UIPinchGestureRecognizer
-  - UIScreenEdgePanGestureRecognizer
-  - UISwipeGestureRecognizer
-  - UITapGestureRecognizer
+  - UILongPressGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for long-press gestures. (iOS 3.2+)
+  - UIPanGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for panning (dragging) gestures. (iOS 3.2+)
+  - UIPinchGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for pinching gestures involving two touches. (iOS 3.2+)
+  - UIScreenEdgePanGestureRecognizer: A gesture recognizer that looks for panning (dragging) gestures that start near an edge of the screen. (iOS 7.0+)
+  - UISwipeGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for swiping gestures in one or more directions. (iOS 3.2+)
+  - UIRotationGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for rotation gestures involving two touches. (iOS 3.2+)
+  - UITapGestureRecognizer: A concrete subclass of UIGestureRecognizer that looks for single or multiple taps. (iOS 3.2+)
 - Custom Gestures
-  - UIGestureRecognizer : The base class for concrete gesture recognizers.
+  - UIGestureRecognizer : The base class for concrete gesture recognizers. (iOS 3.2+)
 #### Peek and Pop
 - Preview
-  - UIPreviewAction : A preview action, or *peek quick action*, that is displayed below a peek when a user swipes the peek upward.
-  - UIPreviewActionGroup : A group of one or more child quick actions, each an instance of the UIPreviewAction class.
-  - UIPreviewInteraction : A class that registers a view to provide a custom user experience in response to 3D Touch interactions.
+  - UIPreviewAction : A preview action, or *peek quick action*, that is displayed below a peek when a user swipes the peek upward. (iOS 9.0+)
+  - UIPreviewActionGroup : A group of one or more child quick actions, each an instance of the UIPreviewAction class. (iOS 9.0+)
+  - UIPreviewInteraction : A class that registers a view to provide a custom user experience in response to 3D Touch interactions. (iOS 10.0+)
 - HomeScreen
-  - UIApplicationShortcutIcon : An image you can optionally associate with a Home screen quick action to improve its appearance and usability.
-  - UIApplicationShortcutItem : An application shortcut item, also called a *Home screen dynamic quick action*, that specifies a user-initiated action for your app.
-  - UIMutableApplicationShortcutItem : An item that specifies a configurable user-initiated action for your app (the item is also called a mutable Home screen dynamic quick action).
+  - UIApplicationShortcutIcon : An image you can optionally associate with a Home screen quick action to improve its appearance and usability. (iOS 9.0+)
+  - UIApplicationShortcutItem : An application shortcut item, also called a *Home screen dynamic quick action*, that specifies a user-initiated action for your app. (iOS 9.0+)
+  - UIMutableApplicationShortcutItem : An item that specifies a configurable user-initiated action for your app (the item is also called a mutable Home screen dynamic quick action). (iOS 9.0+)
 #### Keyboard and Menus
 - Keyboard
-  - UIKeyCommand : An object that specifies a key press performed on a hardware keyboard and the resulting action that should take place.
+  - UIKeyCommand : An object that specifies a key press performed on a hardware keyboard and the resulting action that should take place. (iOS 7.0+)
 - Menus
-  - UIMenuController : The menu interface for the Cut, Copy, Paste, Select, Select All, and Delete commands.
-  - UIMenuItem :A custom item in the editing menu managed by the UIMenuController object.
+  - UIMenuController : The menu interface for the Cut, Copy, Paste, Select, Select All, and Delete commands. (iOS 3.0+)
+  - UIMenuItem :A custom item in the editing menu managed by the UIMenuController object. (iOS 3.2+)
 - Custom Input
-  - UIInputView : An object that displays and manages custom input for a view when that view becomes the first responder.
+  - UIInputView : An object that displays and manages custom input for a view when that view becomes the first responder. (iOS 7.0+)
 
 ## Graphics, Drawing, and Printing
 #### Images and PDF
 - Representation
-	- UIImage : An object that manages image data in your app. (iOS 2.0+)
+ - UIImage : An object that manages image data in your app. (iOS 2.0+)
 #### Drawing
 - Drawing Contexts
-	- UIGraphicsRenderer : An abstract base class for creating graphics renderers. (iOS 10.0+)
-	- UIGraphicsRendererContext : The base class for the drawing environments associated with graphics renderers. (iOS 10.0+)
-	- UIGraphicsRendererFormat : A set of drawing attributes that represent the configuration of a graphics renderer context. (iOS 10.0+)
-	- UIGraphicsImageRenderer : A graphics renderer for creating Core Graphics-backed images. (iOS 10.0+)
-	- UIGraphicsImageRendererContext : The drawing environment associated with an image renderer. (iOS 10.0+)
-	- UIGraphicsImageRendererFormat : A set of drawing attributes that represent the configuration of a image renderer context. (iOS 10.0+)
-	- UIGraphicsPDFRenderer : A graphics renderer for creating PDFs. (iOS 10.0+)
-	- UIGraphicsPDFRendererContext : A drawing environment associated with a PDF renderer. (iOS 10.0+)
-	- UIGraphicsPDFRendererFormat : A set of drawing attributes that represents the configuration of a PDF renderer context. (iOS 10.0+)
+ - UIGraphicsRenderer : An abstract base class for creating graphics renderers. (iOS 10.0+)
+ - UIGraphicsRendererContext : The base class for the drawing environments associated with graphics renderers. (iOS 10.0+)
+ - UIGraphicsRendererFormat : A set of drawing attributes that represent the configuration of a graphics renderer context. (iOS 10.0+)
+ - UIGraphicsImageRenderer : A graphics renderer for creating Core Graphics-backed images. (iOS 10.0+)
+ - UIGraphicsImageRendererContext : The drawing environment associated with an image renderer. (iOS 10.0+)
+ - UIGraphicsImageRendererFormat : A set of drawing attributes that represent the configuration of a image renderer context. (iOS 10.0+)
+ - UIGraphicsPDFRenderer : A graphics renderer for creating PDFs. (iOS 10.0+)
+ - UIGraphicsPDFRendererContext : A drawing environment associated with a PDF renderer. (iOS 10.0+)
+ - UIGraphicsPDFRendererFormat : A set of drawing attributes that represents the configuration of a PDF renderer context. (iOS 10.0+)
 - Color
-	- UIColor : An object that stores color data and sometimes opacity (alpha value). (iOS 2.0+)
+ - UIColor : An object that stores color data and sometimes opacity (alpha value). (iOS 2.0+)
 - Paths
-	- UIBezierPath : A path that consists of straight and curved line segments that you can render in your custom views. (iOS 3.2+)
+ - UIBezierPath : A path that consists of straight and curved line segments that you can render in your custom views. (iOS 3.2+)
 - Strings
   - NSStringDrawingContext : An object that manages metrics used when drawing attributed strings. (iOS 6.0+)
 - Shadows
-	- NSShadow : An encapsulation of the attributes used to create a drop shadow during drawing operations. (iOS 6.0+)
+ - NSShadow : An encapsulation of the attributes used to create a drop shadow during drawing operations. (iOS 6.0+)
 #### Printing
 - Print Panels
-	- UIPrintInteractionController : A printing user interface that manages the printing of documents, images, and other printable content in iOS. (iOS 4.2+)
-	- UIPrinterPickerController : The system interface for selecting a printer. (iOS 8.0+)
+ - UIPrintInteractionController : A printing user interface that manages the printing of documents, images, and other printable content in iOS. (iOS 4.2+)
+ - UIPrinterPickerController : The system interface for selecting a printer. (iOS 8.0+)
 - Renderer
-	- UIPrintPageRenderer : An object that draws pages of content that are to be printed, with or without the assistance of print formatters. (iOS 4.2+)
+ - UIPrintPageRenderer : An object that draws pages of content that are to be printed, with or without the assistance of print formatters. (iOS 4.2+)
 - Job Info
-	- UIPrinter : A printer on the network. (iOS 8.0+)
-	- UIPrintInfo : Information about a print job. (iOS 4.2+)
-	- UIPrintPaper : The size of paper used for a print job and the rectangle in which content can be printed. (iOS 4.2+)
+ - UIPrinter : A printer on the network. (iOS 8.0+)
+ - UIPrintInfo : Information about a print job. (iOS 4.2+)
+ - UIPrintPaper : The size of paper used for a print job and the rectangle in which content can be printed. (iOS 4.2+)
 - Formatters
-	- UIPrintFormatter : An abstract base class for print formatters, which are objects that lay out custom printable content that can cross page boundaries. (iOS 4.2+)
-	- UIViewPrintFormatter : An object that lays out the drawn content (which can span multiple pages) of a view for printing. (iOS 4.2+)
-	- UISimpleTextPrintFormatter : An object that lays out plain text for printing, possibly over multiple pages. (iOS 4.2+)
-	- UIMarkupTextPrintFormatter : An object that lays out HTML markup text for a multipage print job. (iOS 4.2+)
+ - UIPrintFormatter : An abstract base class for print formatters, which are objects that lay out custom printable content that can cross page boundaries. (iOS 4.2+)
+ - UIViewPrintFormatter : An object that lays out the drawn content (which can span multiple pages) of a view for printing. (iOS 4.2+)
+ - UISimpleTextPrintFormatter : An object that lays out plain text for printing, possibly over multiple pages. (iOS 4.2+)
+ - UIMarkupTextPrintFormatter : An object that lays out HTML markup text for a multipage print job. (iOS 4.2+)
 
 ## Text
 #### Text Display and Fonts
 - Layout
-	- NSLayoutManager : An object that coordinates the layout and display of characters held in an NSTextStorage object. (iOS 7.0+)
+ - NSLayoutManager : An object that coordinates the layout and display of characters held in an NSTextStorage object. (iOS 7.0+)
 - Text Views
-	- UILabel : A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose. (iOS 2.0+)
-	- UITextField : An object that displays an editable text area in your interface. (iOS 2.0+)
-	- UITextView : A scrollable, multiline text region. (iOS 2.0+)
+ - UILabel : A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose. (iOS 2.0+)
+ - UITextField : An object that displays an editable text area in your interface. (iOS 2.0+)
+ - UITextView : A scrollable, multiline text region. (iOS 2.0+)
 - Fonts
-	- UIFont : The interface for getting and setting font information. (iOS 2.0+)
-	- UIFontDescriptor : A mechanism to describe a font with a dictionary of attributes. (iOS 7.0+)
-	- UIFontMetrics (iOS 11.0+ beta)
+ - UIFont : The interface for getting and setting font information. (iOS 2.0+)
+ - UIFontDescriptor : A mechanism to describe a font with a dictionary of attributes. (iOS 7.0+)
+ - UIFontMetrics (iOS 11.0+ beta)
 - Spell Checking
-	- UITextChecker : An object you use to check a string (usually the text of a document) for misspelled words. (iOS 3.2+)
+ - UITextChecker : An object you use to check a string (usually the text of a document) for misspelled words. (iOS 3.2+)
 #### Text Storage
 - Data
-	- NSTextStorage : The fundamental storage mechanism of TextKit. (iOS 7.0+)
-	- NSTextContainer : A region where text is laid out. (iOS 7.0+)
-	- NSAttributedString : A string that has associated attributes (such as visual style, hyperlinks, or accessibility data) for portions of its text. (iOS 3.2+)
+ - NSTextStorage : The fundamental storage mechanism of TextKit. (iOS 7.0+)
+ - NSTextContainer : A region where text is laid out. (iOS 7.0+)
+ - NSAttributedString : A string that has associated attributes (such as visual style, hyperlinks, or accessibility data) for portions of its text. (iOS 3.2+)
 - Metrics
-	- UITextPosition : A position in a text container—that is, an index into the backing string in a text-display view. (iOS 3.2+)
-	- UITextRange : A range of characters in a text container, identified by a starting index and an ending index in string backing a text-entry object. (iOS 3.2+)
-	- UITextSelectionRect : An encapsulation of information about a selected range of text in a document. (iOS 6.0+)
+ - UITextPosition : A position in a text container—that is, an index into the backing string in a text-display view. (iOS 3.2+)
+ - UITextRange : A range of characters in a text container, identified by a starting index and an ending index in string backing a text-entry object. (iOS 3.2+)
+ - UITextSelectionRect : An encapsulation of information about a selected range of text in a document. (iOS 6.0+)
 - Paragraphs
-	- NSParagraphStyle : The paragraph or ruler attributes used by an attributed string. (iOS 6.0+)
-	- NSMutableParagraphStyle : An object that enables changing the values of the subattributes in a paragraph style attribute. (iOS 6.0+)
-	- NSTextTab : A tab in an NSParagraphStyle object, storing an alignment type and location. (iOS 7.0+)
+ - NSParagraphStyle : The paragraph or ruler attributes used by an attributed string. (iOS 6.0+)
+ - NSMutableParagraphStyle : An object that enables changing the values of the subattributes in a paragraph style attribute. (iOS 6.0+)
+ - NSTextTab : A tab in an NSParagraphStyle object, storing an alignment type and location. (iOS 7.0+)
 - Attachments
-	- NSTextAttachment : The values for the attachment attributes of attributed strings and related objects. (iOS 7.0+)
+ - NSTextAttachment : The values for the attachment attributes of attributed strings and related objects. (iOS 7.0+)
 #### Keyboards and Input
 - Configuration
-	- UITextInputAssistantItem : Configure the system keyboard, or create your own keyboards and handle input yourself. (iOS 9.0+)
+ - UITextInputAssistantItem : Configure the system keyboard, or create your own keyboards and handle input yourself. (iOS 9.0+)
 - Input
-	- UITextInputMode : The current text-input mode. (iOS 4.2+)
-	- UITextInputStringTokenizer : A base implementation of the UITextInputTokenizer protocol. (iOS 3.2+)
-	- UIDictationPhrase : An object that represents the textual interpretation of a spoken phrase as dictated by a user. (iOS 5.1+)
+ - UITextInputMode : The current text-input mode. (iOS 4.2+)
+ - UITextInputStringTokenizer : A base implementation of the UITextInputTokenizer protocol. (iOS 3.2+)
+ - UIDictationPhrase : An object that represents the textual interpretation of a spoken phrase as dictated by a user. (iOS 5.1+)
 - Custom Keyboards
-	- UIInputViewController : The primary view controller for a custom keyboard app extension. (iOS 8.0+)
-	- UILexicon : A read-only array of term pairs, each in a lexicon entry object, for use by a custom keyboard. (iOS 8.0+)
-	- UILexiconEntry : A read-only term pair, available within a lexicon object, for use by a custom keyboard. (iOS 8.0+)
+ - UIInputViewController : The primary view controller for a custom keyboard app extension. (iOS 8.0+)
+ - UILexicon : A read-only array of term pairs, each in a lexicon entry object, for use by a custom keyboard. (iOS 8.0+)
+ - UILexiconEntry : A read-only term pair, available within a lexicon object, for use by a custom keyboard. (iOS 8.0+)
