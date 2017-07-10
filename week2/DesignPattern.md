@@ -124,15 +124,11 @@ MVVM 패턴은 Data-Binding 방식을 통한 View와 Model간의 원천적인 �
 ## 출처
 - 프로그래머 이규원: envicase CTO
 https://justhackem.wordpress.com/2017/03/05/mvvm-architectural-pattern/
-
 - MVVM Pattern
 https://msdn.microsoft.com/en-us/library/hh848246.aspx
-
 - Xenomity Blog
 http://blog.xenomity.com/entry/MVWModel-View-Whatever%EC%9D%98-%EC%9D%B4%ED%95%B4
-
 - 공대인들이 직접쓰는 컴퓨터공부방
 http://hackersstudy.tistory.com/71
-
 - iOS Architecture Patterns - Bohdan Orlov
 https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52
