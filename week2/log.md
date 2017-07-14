@@ -46,7 +46,7 @@
   - 두 개를 비교할 수는 없음
   - Swift
     - 멀티 타입을 나타낼 수 있는 프로그램 언어
-    - 내부는 class로 이루어져 있음
+    - ~~내부는 class로 이루어져 있음~~ `틀렸습니다. 다시 확인해보세요`
 
 - addTarget에 closure가 아닌 selector가 왜 쓰일까
   - setTarget이 아니고 addTarget인 이유 : 버튼 하나에 여러개 Target 가능
