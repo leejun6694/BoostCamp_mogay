@@ -168,10 +168,10 @@
 
 > Supplement
 - CoreOS, Core Service : C, C++, 하드웨어에 가까움
-- Media Layer : C, C++, Object-C
-- Cocoa Touch Layer : Object-C에서 Swift로 바꿔나가는 중
+- Media Layer : C, C++, Objective-C
+- Cocoa Touch Layer : Objective-C에서 Swift로 바꿔나가는 중
 
-- 네이버 다음 지도 -> Map kit 안건든다
+- 네이버 다음 지도 -> Map kit 안건든다 (_확실치 않음_)
 - 네이버 다음 지도는 상점 정보 모양들이 다 다르다
 - 네이버 다음 지도는 Core Location을 이용해서 위도 경도 값을 받아와서 Media layer 의 요소들로 지도구성들을 보여준다
 
@@ -179,8 +179,8 @@
 
 -  Cocoa Touch에 없는 것을 커스텀 하려면 Media , Core Service Core OS Layer의 프레임 워크들을 사용해야 한다
 
--  코코아 터치에 Kit이라고 써있는 애들은 Core , Core os 에 있는 애들을 우리가 사용하기 쉽게 swift로 포장해 놓은 거다
+-  코코아 터치에 Kit이라고 써있는 애들은 Core , Core os 에 있는 애들을 우리가 사용하기 쉽게 포장해 놓은 거다
 
 - Cocoa Touch에 없는 기능은 그 아래단에서 적절한 프레임워크를 찾아서 우리가 커스터마이징 해야한다.
 
-- Objective-C는 네이밍이 없어서 CLLocation 같은 이름이 생김
+- Objective-C는 네임스페이스가 없어서 **CL**Location 같이 클래스 접두사를 사용
