@@ -1,6 +1,7 @@
 # Dispatch Queue Test
 
 [GCD & OperationQueue](https://github.com/leejun6694/BoostCamp_mogay/blob/master/week4/Thread_Queue.pdf)의 Serial, Concurrent Queue 내용과 Sync, Async 내용을 참고해서 "mogay" method의 실행 결과를 작성하세요
+그리고 해당 결과가 출력할 때 sum의 값이 0인 곳은 출력 숫자 옆에 0도 적어주세요
 
 > 1
 
