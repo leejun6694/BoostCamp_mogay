@@ -1,7 +1,15 @@
 # Dispatch Queue Test
 
-[GCD & OperationQueue](https://github.com/leejun6694/BoostCamp_mogay/blob/master/week4/Thread_Queue.pdf)의 Serial, Concurrent Queue 내용과 Sync, Async 내용을 참고해서 "mogay" method의 실행 결과를 작성하세요
-그리고 해당 결과가 출력할 때 sum의 값이 0인 곳은 출력 숫자 옆에 0도 적어주세요
+[GCD & OperationQueue](https://github.com/leejun6694/BoostCamp_mogay/blob/master/week4/Thread_Queue.pdf)의 Serial, Concurrent Queue 내용과 Sync, Async 내용을 참고해서 "mogay" method의 실행 결과를 작성하세요.
+그리고 해당 결과가 출력될 때 sum의 값이 10000000인 곳은 출력 숫자 옆에 1, 0인 곳은 출력 숫자 옆에 0을 적어 표시주세요.
+
+##### answer example
+```
+1
+2   1    <- sum : 10000000
+3      
+4   0    <- sum : 0
+```
 
 > 1
 
